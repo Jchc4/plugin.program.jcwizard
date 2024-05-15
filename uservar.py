@@ -17,7 +17,7 @@ ADDONTITLE = '[COLOR limegreen][B]JC Wizard[/B][/COLOR]Wizard'
 BUILDERNAME = 'Jchc4'
 EXCLUDES = [ADDON_ID, 'jchc4.github.io']
 # Text File with build info in it. Please read https://github.com/a4k-openproject/plugin.program.openwizard/wiki/Installing-Builds
-BUILDFILE = 'https://www.dropbox.com/scl/fi/zv1ln6ka5ohafqo5s104t/builds.txt?rlkey=29v5lb2c9tizr38bjeki2y8wa&st=2gqa20i9&dl=1'
+BUILDFILE = 'https://www.dropbox.com/scl/fi/zv1ln6ka5ohafqo5s104t/builds.txt?rlkey=29v5lb2c9tizr38bjeki2y8wa&st=yt8t6o59&dl=1'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK = 0
