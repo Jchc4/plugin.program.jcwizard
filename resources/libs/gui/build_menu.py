@@ -175,7 +175,7 @@ class BuildMenu:
             themecheck = tools.open_url(themefile, check=True)
             
             if updatecheck:
-                build = '{0} [COLOR red][CURRENT v{1}][/COLOR]'.format(build, CONFIG.BUILDVERSION)
+                build = '{0} [COLOR limegreen]][CURRENT v{1}][/COLOR]'.format(build, CONFIG.BUILDVERSION)
                 
             directory.add_file(build, description=description, fanart=fanart, icon=icon, themeit=CONFIG.THEME4)
             directory.add_separator()

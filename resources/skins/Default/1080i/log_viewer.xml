@@ -10,7 +10,7 @@
         <!-- Background -->
         <control type="image">
             <texture>Background/white.png</texture>
-            <colordiffuse>FF181818</colordiffuse>
+            <colordiffuse>32CD32</colordiffuse>
         </control>
     
         <control type="group">

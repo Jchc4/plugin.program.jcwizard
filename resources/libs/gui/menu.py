@@ -307,7 +307,7 @@ def system_info():
 
 def save_menu():
     on = '[COLOR springgreen]ON[/COLOR]'
-    off = '[COLOR red]OFF[/COLOR]'
+    off = '[COLOR limegreen]OFF[/COLOR]'
 
     trakt = 'true' if CONFIG.KEEPTRAKT == 'true' else 'false'
     debrid = 'true' if CONFIG.KEEPDEBRID == 'true' else 'false'
@@ -351,7 +351,7 @@ def save_menu():
 def trakt_menu():
     from resources.libs import traktit
 
-    keep_trakt = '[COLOR springgreen]ON[/COLOR]' if CONFIG.KEEPTRAKT == 'true' else '[COLOR red]OFF[/COLOR]'
+    keep_trakt = '[COLOR springgreen]ON[/COLOR]' if CONFIG.KEEPTRAKT == 'true' else '[COLOR limegreen]OFF[/COLOR]'
     last = str(CONFIG.TRAKTSAVE) if not CONFIG.TRAKTSAVE == '' else 'Trakt hasn\'t been saved yet.'
     directory.add_file('[I]Register FREE Account at https://www.trakt.tv/[/I]', icon=CONFIG.ICONTRAKT, themeit=CONFIG.THEME3)
     directory.add_file('Save Trakt Data: {0}'.format(keep_trakt), {'mode': 'togglesetting', 'name': 'keeptrakt'}, icon=CONFIG.ICONTRAKT, themeit=CONFIG.THEME3)
@@ -375,16 +375,16 @@ def trakt_menu():
 
             directory.add_file('[+]-> {0}'.format(name), icon=icon, fanart=fanart, themeit=CONFIG.THEME3)
             if not os.path.exists(path):
-                directory.add_file('[COLOR red]Addon Data: Not Installed[/COLOR]', icon=icon, fanart=fanart, menu=menu)
+                directory.add_file('[COLOR limegreen]Addon Data: Not Installed[/COLOR]', icon=icon, fanart=fanart, menu=menu)
             elif not auser:
-                directory.add_file('[COLOR red]Addon Data: Not Registered[/COLOR]', {'mode': 'authtrakt', 'name': trakt}, icon=icon, fanart=fanart, menu=menu)
+                directory.add_file('[COLOR limegreen]Addon Data: Not Registered[/COLOR]', {'mode': 'authtrakt', 'name': trakt}, icon=icon, fanart=fanart, menu=menu)
             else:
                 directory.add_file('[COLOR springgreen]Addon Data: {0}[/COLOR]'.format(auser), {'mode': 'authtrakt', 'name': trakt}, icon=icon, fanart=fanart, menu=menu)
             if user == "":
                 if os.path.exists(file):
-                    directory.add_file('[COLOR red]Saved Data: Save File Found(Import Data)[/COLOR]', {'mode': 'importtrakt', 'name': trakt}, icon=icon, fanart=fanart, menu=menu2)
+                    directory.add_file('[COLOR limegreen]Saved Data: Save File Found(Import Data)[/COLOR]', {'mode': 'importtrakt', 'name': trakt}, icon=icon, fanart=fanart, menu=menu2)
                 else:
-                    directory.add_file('[COLOR red]Saved Data: Not Saved[/COLOR]', {'mode': 'savetrakt', 'name': trakt}, icon=icon, fanart=fanart, menu=menu2)
+                    directory.add_file('[COLOR limegreen]Saved Data: Not Saved[/COLOR]', {'mode': 'savetrakt', 'name': trakt}, icon=icon, fanart=fanart, menu=menu2)
             else:
                 directory.add_file('[COLOR springgreen]Saved Data: {0}[/COLOR]'.format(user), icon=icon, fanart=fanart, menu=menu2)
 
@@ -399,7 +399,7 @@ def trakt_menu():
 def debrid_menu():
     from resources.libs import debridit
 
-    keep_debrid = '[COLOR springgreen]ON[/COLOR]' if CONFIG.KEEPDEBRID == 'true' else '[COLOR red]OFF[/COLOR]'
+    keep_debrid = '[COLOR springgreen]ON[/COLOR]' if CONFIG.KEEPDEBRID == 'true' else '[COLOR limegreen]OFF[/COLOR]'
     last = str(CONFIG.DEBRIDSAVE) if not CONFIG.DEBRIDSAVE == '' else 'Debrid authorizations haven\'t been saved yet.'
     directory.add_file('[I]https://www.real-debrid.com/ is a PAID service.[/I]', icon=CONFIG.ICONDEBRID, themeit=CONFIG.THEME3)
     directory.add_file('[I]https://www.premiumize.me/ is a PAID service.[/I]', icon=CONFIG.ICONDEBRID, themeit=CONFIG.THEME3)
@@ -424,16 +424,16 @@ def debrid_menu():
 
             directory.add_file('[+]-> {0}'.format(name), icon=icon, fanart=fanart, themeit=CONFIG.THEME3)
             if not os.path.exists(path):
-                directory.add_file('[COLOR red]Addon Data: Not Installed[/COLOR]', icon=icon, fanart=fanart, menu=menu)
+                directory.add_file('[COLOR limegreen]Addon Data: Not Installed[/COLOR]', icon=icon, fanart=fanart, menu=menu)
             elif not auser:
-                directory.add_file('[COLOR red]Addon Data: Not Registered[/COLOR]', {'mode': 'authdebrid', 'name': debrid}, icon=icon, fanart=fanart, menu=menu)
+                directory.add_file('[COLOR limegreen]Addon Data: Not Registered[/COLOR]', {'mode': 'authdebrid', 'name': debrid}, icon=icon, fanart=fanart, menu=menu)
             else:
                 directory.add_file('[COLOR springgreen]Addon Data: {0}[/COLOR]'.format(auser), {'mode': 'authdebrid', 'name': debrid}, icon=icon, fanart=fanart, menu=menu)
             if user == "":
                 if os.path.exists(file):
-                    directory.add_file('[COLOR red]Saved Data: Save File Found (Import Data)[/COLOR]', {'mode': 'importdebrid', 'name': debrid}, icon=icon, fanart=fanart, menu=menu2)
+                    directory.add_file('[COLOR limegreen]Saved Data: Save File Found (Import Data)[/COLOR]', {'mode': 'importdebrid', 'name': debrid}, icon=icon, fanart=fanart, menu=menu2)
                 else:
-                    directory.add_file('[COLOR red]Saved Data: Not Saved[/COLOR]', {'mode': 'savedebrid', 'name': debrid}, icon=icon, fanart=fanart, menu=menu2)
+                    directory.add_file('[COLOR limegreen]Saved Data: Not Saved[/COLOR]', {'mode': 'savedebrid', 'name': debrid}, icon=icon, fanart=fanart, menu=menu2)
             else:
                 directory.add_file('[COLOR springgreen]Saved Data: {0}[/COLOR]'.format(user), icon=icon, fanart=fanart, menu=menu2)
 
@@ -448,7 +448,7 @@ def debrid_menu():
 def login_menu():
     from resources.libs import loginit
 
-    keep_login = '[COLOR springgreen]ON[/COLOR]' if CONFIG.KEEPLOGIN == 'true' else '[COLOR red]OFF[/COLOR]'
+    keep_login = '[COLOR springgreen]ON[/COLOR]' if CONFIG.KEEPLOGIN == 'true' else '[COLOR limegreen]OFF[/COLOR]'
     last = str(CONFIG.LOGINSAVE) if not CONFIG.LOGINSAVE == '' else 'Login data hasn\'t been saved yet.'
     directory.add_file('[I]Several of these addons are PAID services.[/I]', icon=CONFIG.ICONLOGIN, themeit=CONFIG.THEME3)
     directory.add_file('Save API Keys: {0}'.format(keep_login), {'mode': 'togglesetting', 'name': 'keeplogin'}, icon=CONFIG.ICONLOGIN, themeit=CONFIG.THEME3)
@@ -472,16 +472,16 @@ def login_menu():
 
             directory.add_file('[+]-> {0}'.format(name), icon=icon, fanart=fanart, themeit=CONFIG.THEME3)
             if not os.path.exists(path):
-                directory.add_file('[COLOR red]Addon Data: Not Installed[/COLOR]', icon=icon, fanart=fanart, menu=menu)
+                directory.add_file('[COLOR limegreen]Addon Data: Not Installed[/COLOR]', icon=icon, fanart=fanart, menu=menu)
             elif not auser:
-                directory.add_file('[COLOR red]Addon Data: Not Registered[/COLOR]', {'mode': 'authlogin', 'name': login}, icon=icon, fanart=fanart, menu=menu)
+                directory.add_file('[COLOR limegreen]Addon Data: Not Registered[/COLOR]', {'mode': 'authlogin', 'name': login}, icon=icon, fanart=fanart, menu=menu)
             else:
                 directory.add_file('[COLOR springgreen]Addon Data: {0}[/COLOR]'.format(auser), {'mode': 'authlogin', 'name': login}, icon=icon, fanart=fanart, menu=menu)
             if user == "":
                 if os.path.exists(file):
-                    directory.add_file('[COLOR red]Saved Data: Save File Found (Import Data)[/COLOR]', {'mode': 'importlogin', 'name': login}, icon=icon, fanart=fanart, menu=menu2)
+                    directory.add_file('[COLOR limegreen]Saved Data: Save File Found (Import Data)[/COLOR]', {'mode': 'importlogin', 'name': login}, icon=icon, fanart=fanart, menu=menu2)
                 else:
-                    directory.add_file('[COLOR red]Saved Data: Not Saved[/COLOR]', {'mode': 'savelogin', 'name': login}, icon=icon, fanart=fanart, menu=menu2)
+                    directory.add_file('[COLOR limegreen]Saved Data: Not Saved[/COLOR]', {'mode': 'savelogin', 'name': login}, icon=icon, fanart=fanart, menu=menu2)
             else:
                 directory.add_file('[COLOR springgreen]Saved Data: {0}[/COLOR]'.format(user), icon=icon, fanart=fanart, menu=menu2)
 
@@ -520,7 +520,7 @@ def enable_addons(all=False):
         if len(addonids) == 0:
             directory.add_file("No Addons Found to Enable or Disable.", icon=CONFIG.ICONMAINT)
         else:
-            directory.add_file("[I][B][COLOR red]!!Notice: Disabling Some Addons Can Cause Issues!![/COLOR][/B][/I]", icon=CONFIG.ICONMAINT)
+            directory.add_file("[I][B][COLOR limegreen]!!Notice: Disabling Some Addons Can Cause Issues!![/COLOR][/B][/I]", icon=CONFIG.ICONMAINT)
             directory.add_dir('Enable All Addons', {'mode': 'enableall'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
             for i in range(0, len(addonids)):
                 folder = os.path.join(CONFIG.ADDONS, addonids[i])
@@ -530,7 +530,7 @@ def enable_addons(all=False):
                     state = "[COLOR springgreen][Enabled][/COLOR]"
                     goto = "false"
                 else:
-                    state = "[COLOR red][Disabled][/COLOR]"
+                    state = "[COLOR limegreen][Disabled][/COLOR]"
                     goto = "true"
 
                 directory.add_file("{0} {1}".format(state, addonnames[i]), {'mode': 'toggleaddon', 'name': addonids[i], 'url': goto}, icon=icon, fanart=fanart)
@@ -543,10 +543,10 @@ def enable_addons(all=False):
 
 def remove_addon_data_menu():
     if os.path.exists(CONFIG.ADDON_DATA):
-        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] All Addon_Data', {'mode': 'removedata', 'name': 'all'}, themeit=CONFIG.THEME2)
-        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] All Addon_Data for Uninstalled Addons', {'mode': 'removedata', 'name': 'uninstalled'}, themeit=CONFIG.THEME2)
-        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] All Empty Folders in Addon_Data', {'mode': 'removedata', 'name': 'empty'}, themeit=CONFIG.THEME2)
-        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] {0} Addon_Data'.format(CONFIG.ADDONTITLE), {'mode': 'resetaddon'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR limegreen][B][REMOVE][/B][/COLOR] All Addon_Data', {'mode': 'removedata', 'name': 'all'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR limegreen][B][REMOVE][/B][/COLOR] All Addon_Data for Uninstalled Addons', {'mode': 'removedata', 'name': 'uninstalled'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR limegreen][B][REMOVE][/B][/COLOR] All Empty Folders in Addon_Data', {'mode': 'removedata', 'name': 'empty'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR limegreen][B][REMOVE][/B][/COLOR] {0} Addon_Data'.format(CONFIG.ADDONTITLE), {'mode': 'resetaddon'}, themeit=CONFIG.THEME2)
         directory.add_separator(themeit=CONFIG.THEME3)
         fold = glob.glob(os.path.join(CONFIG.ADDON_DATA, '*/'))
         for folder in sorted(fold, key = lambda x: x):
@@ -565,7 +565,7 @@ def remove_addon_data_menu():
             if foldername in CONFIG.EXCLUDES:
                 folderdisplay = '[COLOR springgreen][B][PROTECTED][/B][/COLOR] {0}'.format(folderdisplay)
             else:
-                folderdisplay = '[COLOR red][B][REMOVE][/B][/COLOR] {0}'.format(folderdisplay)
+                folderdisplay = '[COLOR limegreen][B][REMOVE][/B][/COLOR] {0}'.format(folderdisplay)
             directory.add_file(' {0}'.format(folderdisplay), {'mode': 'removedata', 'name': foldername}, icon=icon, fanart=fanart, themeit=CONFIG.THEME2)
     else:
         directory.add_file('No Addon data folder found.', themeit=CONFIG.THEME3)
