@@ -17,7 +17,7 @@ ADDONTITLE = '[COLOR crimson][B]Ragnarok[/B][/COLOR]Wizard'
 BUILDERNAME = 'Ragnarok'
 EXCLUDES = [ADDON_ID, 'repository.ragnarokwizard']
 # Text File with build info in it. Please read https://github.com/a4k-openproject/plugin.program.openwizard/wiki/Installing-Builds
-BUILDFILE = 'https://raw.githubusercontent.com/ragnarlothbrok-odin/Wizard/master/builds.txt'
+BUILDFILE = 'https://www.dropbox.com/scl/fi/zv1ln6ka5ohafqo5s104t/builds.txt?rlkey=29v5lb2c9tizr38bjeki2y8wa&st=2gqa20i9&dl=1'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK = 0
