@@ -75,8 +75,9 @@ THEME5 = u'[COLOR {color1}]Current Theme:[/COLOR] [COLOR {color2}]{{}}[/COLOR]'.
 
 # Message for Contact Page
 # Enable 'Contact' menu item 'Yes' hide or 'No' dont hide
-HIDECONTACT = 'No'
+HIDECONTACT = 'yes'
 # You can add \n to do line breaks
+CONTACT = ''
 # Images used for the contact window.  http:// for default icon and fanart
 CONTACTICON = os.path.join(ART, 'qricon.png')
 CONTACTFANART = 'http://'
