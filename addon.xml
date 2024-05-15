@@ -18,5 +18,7 @@
     <platform>all</platform>
     <reuselanguageinvoker>false</reuselanguageinvoker>
         <source>https://github.com/Jchc4/plugin.program.jcwizard</source>
+    <news>
+    </news>
   </extension>
 </addon>
